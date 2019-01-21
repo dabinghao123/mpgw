@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" type="text/css" href="css/common.css" media="screen" />
+<script src="js/jquery.min.js"></script>
+<script>
+
+function setScale() {
+
+    if (window.top !== window) {
+
+        return;
+
+    }
+
+    var pageScale = 1;
+
+
+
+    var width = document.documentElement.clientWidth || 320;
+
+    var height = document.documentElement.clientHeight || 486;
+
+
+
+    if (width / height >= 320 / 486) {
+
+        pageScale = height / 486;
+
+    } else {
+
+        pageScale = width / 320;
+
+    }
+
+    var content = 'width=320, initial-scale=' + pageScale + ', maximum-scale=' + pageScale + ', user-scalable=no';
+
+    document.getElementById('viewport').setAttribute('content', content);
+
+}
+
+setScale();
+
+</script>
+<style>
+#nb_icon_wrap {
+	display: none !important;
+}
+</style>
+</head>
+
+<body  >
+<div class="top-cat pid-cat">
+  <div class="cat-s cat_pid">
+    <ul class="cl">
+      {dede:channel type='son'}
+      <li class="cat-item"><a href="list.php?tid=[field:id/]" title="[field:typename/]">[field:typename/]</a> </li>
+      {/dede:channel}
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" id="pid-cat">
+
+    var navleft_pid = $('.pid-cat li.current-cat').position().left + 100 - document.body.clientWidth;
+
+    if(navleft_pid ){
+
+        $('.cat_pid').scrollLeft(navleft_pid);
+
+    }
+
+</script>
+<div id="list">
+  {dede:list pagesize='8' titlelen='60'}
+  <div class="post-list-data"> <a href="view.php?aid=[field:id/]" title="[field:title/]" class="s cl">
+    <div class="m z"> <img src="[field:litpic/]"  alt="[field:title/]"> </div>
+    <h6>[field:title/]</h6>
+    <p class="cl"> <span class="z">[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span><span class="y"><i class="iconfont">&#xe6e6;</i><script src="/plus/count.php?view=yes&aid=[field:id/]&mid=[field:mid/]" type='text/javascript' language="javascript"></script></span> </p>
+    </a> </div>
+  {/dede:list}
+</div>
+<div style="height:50px;">
+  <div class="pagess">
+<ul>
+ {dede:pagelist listitem="index,end,pageno" listsize="3"/}
+</ul>
+</div>
+</div>
+{dede:include filename="foot_m.htm"/}
+</body>
+</html>

@@ -1,0 +1,1 @@
+<a href="list.php?tid=[field:id/]"> <i class="iconfont">&#xe6bf;</i> <span>新闻</span> </a>

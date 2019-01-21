@@ -1,0 +1,44 @@
+<?php
+$z[0]=Array("type","<dt>[field:typename /]</dt>",102,163);
+$z[0][4]=array();
+$z[0][4]['typeid']="4";
+$z[1]=Array("channel","\r\n        <dd><a href=\"[field:typeurl/]\"  title=\"[field:typename/]\" >[field:typename/]</a></dd>\r\n        ",173,329);
+$z[1][4]=array();
+$z[1][4]['type']="son";
+$z[1][4]['typeid']="4";
+$z[2]=Array("type","<dt>[field:typename /]</dt>",381,442);
+$z[2][4]=array();
+$z[2][4]['typeid']="7";
+$z[3]=Array("channel","\r\n        <dd><a href=\"[field:typeurl/]\"  title=\"[field:typename/]\" >[field:typename/]</a></dd>\r\n        ",452,608);
+$z[3][4]=array();
+$z[3][4]['type']="son";
+$z[3][4]['typeid']="7";
+$z[4]=Array("global","",703,724);
+$z[4][4]=array();
+$z[4][4]['name']="cfg_dh";
+$z[5]=Array("global","",752,773);
+$z[5][4]=array();
+$z[5][4]['name']="cfg_yx";
+$z[6]=Array("global","",801,822);
+$z[6][4]=array();
+$z[6][4]['name']="cfg_dz";
+$z[7]=Array("global","",850,871);
+$z[7][4]=array();
+$z[7][4]['name']="cfg_sj";
+$z[8]=Array("flink","",1236,1258);
+$z[8][4]=array();
+$z[8][4]['row']="50";
+$z[9]=Array("global","",1361,1387);
+$z[9][4]=array();
+$z[9][4]['name']="cfg_powerby";
+$z[10]=Array("global","",1459,1483);
+$z[10][4]=array();
+$z[10][4]['name']="cfg_beian";
+$z[11]=Array("global","",1612,1633);
+$z[11][4]=array();
+$z[11][4]['name']="cfg_qq";
+$z[12]=Array("global","",1735,1756);
+$z[12][4]=array();
+$z[12][4]['name']="cfg_dh";
+
+?>

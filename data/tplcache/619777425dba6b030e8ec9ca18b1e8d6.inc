@@ -1,0 +1,1 @@
+<a class="btn" href="[field:typelink /]">获取更多</a>

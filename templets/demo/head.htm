@@ -1,0 +1,24 @@
+<div  class="header">
+  <div class="wp">
+    <div class="wps cl">
+      <h1><a href="/" rel="home"> <img src="/style/images/logo.png" alt="{dede:global.cfg_webname/}"  height="60"/> </a></h1>      
+      <div class="header-tel y"> <span>{dede:global.cfg_dh/}</span> </div>
+      <div class="nav">
+        <ul id="menu-csweigounv" class="cl">
+          <li><a href="/">首页</a></li>
+          {dede:channelartlist row=10 typeid='top'}
+          <li><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+            <ul class="sub-menu">
+              {dede:channel type='son' noself='yes'}
+              <li><a href="[field:typelink/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </li>
+          {/dede:channelartlist}
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

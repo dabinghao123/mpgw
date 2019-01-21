@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link  href="/style/css/common.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/style/js/jquery.min.js"></script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="main">
+<div class="cat-header" style="background-image: url(/style/images/h-top-3.jpg);">
+  <div class="s">
+    <div class="wp">
+      <h1>{dede:field.typeid runphp='yes'}$ID = @me; $sql = "SELECT * FROM `dede_arctype` WHERE id=$ID";$query = mysql_query($sql);$row=mysql_fetch_array($query); $relID = "$row[reid]"; if($relID == 0) {@me = $row[typename];}else{$sql = "SELECT `typename` FROM `dede_arctype` WHERE id=$relID";$query = mysql_query($sql);$row=mysql_fetch_array($query); @me = $row[typename];}{/dede:field.typeid}</h1>
+      <div class="line"></div>
+      <p>用技术与专注，将作品通过艺术和技术的结合，打造精品案例。</p>
+    </div>
+  </div>
+</div>
+<div class="cat-list">
+  <ul class="wp">
+    {dede:channel type='son' currentstyle="<li class='cat-item current-cat'><a href='~typelink~'>~typename~</a></li>"}
+    <li class="cat-item"><a href="[field:typelink/]">[field:typename/]</a></li>
+    {/dede:channel}
+  </ul>
+</div>
+<div class="in-cont wp cl">
+  <div class="caselist cl">
+    {dede:list pagesize='12' titlelen='50'}
+    <div class='data'>
+      <div class="m"> <a href="[field:arcurl/]" class="imgurl"> <img width="300" height="200" src="[field:litpic/]" class="attachment-post-thumbnail wp-post-image" alt="[field:title/]"/> </a> </div>
+      <div class="info">
+        <h2><em class="view"><script src="/plus/count.php?view=yes&aid=[field:id/]&mid=[field:mid/]" type='text/javascript' language="javascript"></script></em><a href="[field:arcurl/]" rel="bookmark">[field:title/]</a></h2>
+      </div>
+    </div>
+   {/dede:list}
+  </div>
+  <div class="pagess">
+<ul>
+ {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+</ul>
+</div>
+</div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

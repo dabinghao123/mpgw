@@ -1,0 +1,1 @@
+<li><a href="view.php?aid=[field:id/]" rel="bookmark" title="[field:title/]">[field:title/]</a></li>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link  href="/style/css/common.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/style/js/jquery.min.js"></script>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="main">
+  <link rel='stylesheet' type='text/css'  href='/style/css/page.css'/>
+  <div class="page-header page-header-jianzhan" style="background: url(/style/images/service.jpg) no-repeat center top;">
+    <div class="s">
+      <div class="wp">
+        <div class="wps">
+          <h1>{dede:field.typeid runphp='yes'}$ID = @me; $sql = "SELECT * FROM `dede_arctype` WHERE id=$ID";$query = mysql_query($sql);$row=mysql_fetch_array($query); $relID = "$row[reid]"; if($relID == 0) {@me = $row[typename];}else{$sql = "SELECT `typename` FROM `dede_arctype` WHERE id=$relID";$query = mysql_query($sql);$row=mysql_fetch_array($query); @me = $row[typename];}{/dede:field.typeid}</h1>
+          <div class="line"></div>
+          <p>用我们的专业和诚信赢得您的信赖，从PC到移动互联网均有您想要的服务！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-service">
+    <div class="page-title">
+      <div class="title">网站建设</div>
+      <div class="title-line"></div>
+      <div class="tips">企业网站、购物商城、行业门户、社区论坛、政府/事业单位等网站定制开发！</div>
+    </div>
+    <div class="wp">
+      <div class="s cl">
+        <div class="data"> <a href="javascript:">
+          <div class="title">企业网站</div>
+          <div class="m"><img src="/style/images/gw.png" width="45" height="45" /></div>
+          <p class="des">企业门户官网/企业营销型网站定制开发、设计、建设</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">行业门户</div>
+          <div class="m"><img src="/style/images/hy.png" width="45" height="45" /></div>
+          <p class="des">垂直行业综合门户开发，资讯、交易、分类信息、下载等</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">购物商城</div>
+          <div class="m"><img src="/style/images/shop.png" width="45" height="45" /></div>
+          <p class="des">单/多用户商城、订单、支付、提现、财务管理</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">社区论坛</div>
+          <div class="m"><img src="/style/images/bbs.png" width="45" height="45" /></div>
+          <p class="des">会员管理及分级权限、板块分级及权限、帖子管理<</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">政府官网</div>
+          <div class="m"><img src="/style/images/gov.png" width="45" height="45" /></div>
+          <p class="des">政府机构信息化建设，便民服务窗口，安全稳定</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">活动官网</div>
+          <div class="m"><img src="/style/images/action.png" width="45" height="45" /></div>
+          <p class="des">活动官方网站，信息发布、投票、报名、评比等</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">O2O系统</div>
+          <div class="m"><img src="/style/images/o2o.png" width="45" height="45" /></div>
+          <p class="des">商家入驻、LBS定位、商品、附近商家、购物车、会员管理</p>
+          </a> </div>
+        <div class="data"> <a href="javascript:">
+          <div class="title">外贸网站</div>
+          <div class="m"><img src="/style/images/global.png" width="45" height="45" /></div>
+          <p class="des">企业出海必备，多语言，针对Google针对性优化</p>
+          </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-service">
+    <div class="page-title">
+	<div class="title">移动端/APP</div>
+      <div class="title-line"></div>
+      <div class="tips">手机网站、原生APP、API开发、H5单页等移动终端产品定制开发！</div>
+    </div>
+    <div class="wp">
+      <div class="s cl">
+        <div class="data"> <a href="javascript:">
+          <div class="title">手机网站</div>
+          <div class="m"><img src="/style/images/gw.png" width="45" height="45"></div>
+          <p class="des">可以在手机浏览器、微信、独立APP等各种环境浏览的网站</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">APP开发</div>
+          <div class="m"><img src="/style/images/ios.png" width="45" height="45"></div>
+          <p class="des">IOS和安卓两大主流平台的移动APP客户端开发</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">API开发</div>
+          <div class="m"><img src="/style/images/gov.png" width="45" height="45"></div>
+          <p class="des">APP及网站服务端开发，提供规范的API技术文档</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">H5单页</div>
+          <div class="m"><img src="/style/images/h5.png" width="45" height="45"></div>
+          <p class="des">提供活动、报名、招聘等形式的H5高逼格单页开发</p>
+          </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-service">
+    <div class="page-title">
+	<div class="title">微信/小程序</div>
+      <div class="title-line"></div>
+      <div class="tips">基于微信/小程序模板消息、微信支付等开放组件及接口开发各类微信场景应用！</div>
+    </div>
+    <div class="wp">
+      <div class="s cl">
+        <div class="data"> <a href="javascript:">
+          <div class="title">微信官网</div>
+          <div class="m"><img src="/style/images/gw.png" width="45" height="45"></div>
+          <p class="des">利用微信开发能力结合原生技术开发用于微信浏览的网站</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">小程序</div>
+          <div class="m"><img src="/style/images/xcx.png" width="45" height="45"></div>
+          <p class="des">免安装、易推广，拥有丰富组件及API能力</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">微信商城</div>
+          <div class="m"><img src="/style/images/shop.png" width="45" height="45"></div>
+          <p class="des">基于微信支付、微信登录等能力的电子商务商城</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">微信活动</div>
+          <div class="m"><img src="/style/images/wx-action.png" width="45" height="45"></div>
+          <p class="des">基于微信开发能力使用户更加便捷参与活动</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">微信报名</div>
+          <div class="m"><img src="/style/images/wx-bm.png" width="45" height="45"></div>
+          <p class="des">基于微信开放能力方便用户快速参与报名</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">微信投票</div>
+          <div class="m"><img src="/style/images/wx-tp.png" width="45" height="45"></div>
+          <p class="des">基于微信开放能力限制微信投票刷票等行为</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">微信O2O</div>
+          <div class="m"><img src="/style/images/wx-o2o.png" width="45" height="45"></div>
+          <p class="des">基于微信支付、LBS的开发能力开放本地化O2O平台</p>
+          </a> </div><div class="data"> <a href="javascript:">
+          <div class="title">更多应用</div>
+          <div class="m"><img src="/style/images/all.png" width="45" height="45"></div>
+          <p class="des">扫码购物、微订单等更多基于微信开放能力应用</p>
+          </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-advantage">
+    <div class="cover"></div>
+    <div class="page-title">
+      <div class="title">这也许是您即将选择我们的理由</div>
+      <div class="title-line"></div>
+      <div class="tips">纵然我们已经拥有无数让您选择的理由，但我们期待更多</div>
+    </div>
+    <div class="wp">
+      <div class="s cl">
+        <div class="data">
+          <dl>
+            <dt><span>个性定制<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-dz.png"/></dd>
+            <dd class="des">您的想法加上我们的专业技术及服务能力产出您想想要的产品,绝非生搬硬套式开发。</dd>
+          </dl>
+        </div>
+        <div class="data">
+          <dl>
+            <dt><span>开发规范<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-gf.png"/></dd>
+            <dd class="des">采用SVN/GIT等工具进行代码版本控制可以溯源代码历史，技术文档更加规范。</dd>
+          </dl>
+        </div>
+        <div class="data">
+          <dl>
+            <dt><span>极速响应<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-js.png"/></dd>
+            <dd class="des">不管项目开发中，还是售后维护阶段；工程师快速响应，紧急问题下班时间照常响应。</dd>
+          </dl>
+        </div>
+        <div class="data">
+          <dl>
+            <dt><span>安全稳定<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-aq.png"/></dd>
+            <dd class="des">实时监测服务器集群运行状态、资源占用率；程序自动进行数据库数据备份。</dd>
+          </dl>
+        </div>
+        <div class="data">
+          <dl>
+            <dt><span>完整交付<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-jf.png"/></dd>
+            <dd class="des">域名/空间/备案等账号、源代码、技术文档等所有的输出物全部交付给甲方。</dd>
+          </dl>
+        </div>
+        <div class="data">
+          <dl>
+            <dt><span>完善售后<em></em></span></dt>
+            <dd class="m"><img src="/style/images/ly-sh.png"/></dd>
+            <dd class="des">不少于一年售后服务期，包含故障修复、备案、备份、安全防护、问题咨询等。</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  {dede:include filename="msg.htm"/}
+  <div class="showmsg"></div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>
